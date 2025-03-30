@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: ./src
+    env_file:
+      - .env
+    volumes:
+      - ./botData:/usr/src/app/storage  # Required for bot's login info & encryption keys
+      - ./logs:/srv/logs                # Optional for when your script saves any kind of files that you want to take out.
+
